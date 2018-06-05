@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="./web_files/page.css" />
+    <link rel="stylesheet" type="text/css" href="./web_files/page.localised.css" />
+    <!-- <title>ODD v5.0 ACM SIGKDD 2018 Workshop</title> -->
+    <title>ODD v5.0: Outlier Detection De-constructed</title>
+
+    <script type="text/javascript">
+        // This script allows hiding/showing of elements
+        function toggle(name) {
+            //var ele = document.getElementById("abstractText");
+            var ele = document.getElementById(name);
+            if(ele.id == "abs1"){
+                var text = document.getElementById("toggleText");
+            } else {
+                var text = document.getElementById("toggleText2");
+            }
+            if(ele.style.display == "block") {
+                ele.style.display = "none";
+                text.innerHTML = "abstract";
+            } else {
+                ele.style.display = "block";
+                text.innerHTML = "hide abstract";
+            }
+        }
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-29073076-2', 'outlier-analytics.org');
+        ga('send', 'pageview');
+    </script>
+</head>
+<body style="">
+    <div id="container">
+        <div id="c2">
+            <div id="c3">
+                <div id="header"><img id="header-bg" src="./web_files/odd3cover.png" />
+                    <div id="header-toptitle">ACM SIGKDD 2018 Workshop</div>
+                    <div id="header-subtitle">November 17th, Singapore</div>
+                    <div id="header-title" align="right">Deep Learning and Tensor/Matrix Decomposition for Applications in Neuroscience</div>
+                </div>
+                <div id="menu">
+                    <div id="menu-public">
+                        <div class="nav-list"></div>
+                    </div>
+                </div>
+                <div id="content">
+                    <br><p>
+                        <!-- ODD v5.0 is a full day workshop, organized in conjunction with ACM SIGKDD 2018.<br>
+                        We build on the successful series of past four ODD Workshops that have been organized:<br> <a href="http://outlier-analytics.org/odd16kdd/">ODD 4.0</a> @KDD 2016, <a href="http://outlier-analytics.org/odd15kdd/">ODDx3</a> @KDD 2015, <a href="http://outlier-analytics.org/odd14kdd/">ODD^2</a> @KDD 2014, and <a href="http://outlier-analytics.org/odd13kdd/">ODD</a> @KDD 2013. -->
+                        The IEEE International Conference on Data Mining series (ICDM) has established itself as the world’s premier research conference in data mining. It provides an international forum for presentation of original research results, as well as exchange and dissemination of innovative, practical development experiences. The conference covers all aspects of data mining, including algorithms, software and systems, and applications. ICDM draws researchers and application developers from a wide range of data mining related areas such as statistics, machine learning, pattern recognition, databases and data warehousing, data visualization, knowledge-based systems, and high performance computing. By promoting novel, high quality research findings, and innovative solutions to challenging data mining problems, the conference seeks to continuously advance the state-of-the-art in data mining. Besides the technical program, the conference features workshops, tutorials, panels.
+                    </p>
+                    <!-- <p>
+                        The main goal of the ODD workshop is to bring together academics, industry and government researchers and practitioners to discuss and reflect on recent outlier mining challenges.
+                    </p> -->
+
+                    <h2 id="dates">Important Dates</h2>
+                    <span style="color: #2a62bd;">All deadlines are at 11:59PM Pacific Time.</span>
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Workshop proposals</th>
+                                    <td>March 15, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>ICDM contest proposals</th>
+                                    <td>April 10, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Workshop notification</th>
+                                    <td>March 29, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Full paper submissions</th>
+                                    <td>June 5, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Demo and tutorial proposals</th>
+                                    <td>July 15, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Workshop paper submissions</th>
+                                    <td>August 7, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Conference paper, tutorial, demo notification</th>
+                                    <td>August 17, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Workshop paper notification</th>
+                                    <td>September 4, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Camera-ready deadline and copyright forms</th>
+                                    <td>September 15, 2018</td>
+                                </tr>
+                                <tr>
+                                    <th>Conference dates</th>
+                                    <td>November 17 – 20, 2018</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h2 id="keynote">Preliminary list of invited speakers</h2>
+                    <div>
+                        <ol>
+                            <div style="float: left; width: 50%;">
+                                <div style="padding-right: 30px; margin-left: -20px;">
+                                    <li style="margin-bottom: 20px;">
+                                        <b>Prof. Tonio Ball</b><br>
+                                        Translational Neurotechnology Lab<br>
+                                        Medical Center - University of Freiburg<br>
+                                        Freiburg, Germany<br>
+                                        tonio.ball@uniklinik-freiburg.de
+                                    </li>
+                                    <li style="margin-bottom: 20px;">
+                                        <b>Prof. Danilo Mandic</b><br>
+                                        Faculty of Engineering<br>
+                                        Department of Electrical and Electronic Engineering<br>
+                                        Imperial College, UK<br>
+                                        d.mandic@imperial.ac.uk
+                                    </li>
+                                    <li style="margin-bottom: 20px;">
+                                        <b>Prof. Justin Dauwels</b><br>
+                                        School of Electrical and Electronic Engineering<br>
+                                        Nanyang Technological University<br>
+                                        JDAUWELS@NTU.EDU.SG
+                                    </li>
+                                    <li style="margin-bottom: 20px;">
+                                        <b>Dr. Sridha Sridharan, and David Ahmedt-Aristizabal</b><br>
+                                        School of Electrical Engineering & Computer Science,<br>
+                                        Queensland University of Technology, Brisbane, Australia<br>
+                                        s.sridharan@qut.edu.au<br>
+                                        david.aristizabal@hdr.qut.edu.au
+                                    </li>
+                                    <li style="margin-bottom: 20px;">
+                                        <b>Prof. Yuanqing Li</b><br>
+                                        School of Automation Science and Engineering, South China University of Technology<br>
+                                        Director, Research Center for Brain Computer Interfaces and Brain Information Processing,<br>
+                                        South China University of Technology<br>
+                                        auyqli@scut.edu.cn
+                                    </li>
+                                </div>
+                            </div>
+                            <div style="float: left; width: 50%;">
+                                <li style="margin-bottom: 20px;">
+                                    <b>Prof. Qiang Wu</b><br>
+                                    School of Information Science and Engineering<br>
+                                    Shandong University, Jinan, Shandong, China<br>
+                                    wuqiang@sdu.edu.cn
+                                </li>
+                                <li style="margin-bottom: 20px;">
+                                    <b>Dr. Junhua LI</b><br>
+                                    Center for Life Sciences (CeLS),<br>
+                                    National University of Singapore<br>
+                                    juhalee@nus.edu.sg
+                                </li>
+                                <li style="margin-bottom: 20px;">
+                                    <b>Prof. Jing Jin</b><br>
+                                    Shanghai, China<br>
+                                    Group for Brain-Computer Interface and Control,<br>
+                                    Key Lab. for Advanced Control and Optimization for Chemical Processes,<br>
+                                    East China University of Science and Technology (ECUST)<br>
+                                    jinjing@ecust.edu.cn, jinjingat@gmail.com
+                                </li>
+                                <li style="margin-bottom: 20px;">
+                                    <b>Dr. Dan Meyer and Dr. Alberto Santa-Maria</b><br>
+                                    GE Global Research, USA
+                                </li>
+                                <li style="margin-bottom: 20px;">
+                                    <b>Dr. Mikhail Belayev</b>,<br>
+                                    Co-Brain Analytics,<br>
+                                    Skolkovo Institute of Science and Technology, Russia<br>
+                                    m.belyaev@skoltech.ru
+                                </li>
+                            </div>
+                        </ol>
+                    </div>
+                    <div style="clear: both;"></div>
+
+                    <h2 id="description">Description of the workshop topic, and a draft version of CFP</h2>
+                    <div>
+                        <p>
+                            Recent breakthroughs in machine learning, especially deep neural networks and tensor networks, extend far beyond their original purpose. It is expected that physicians will be able to completely rely on the machine interpretation of MRIs, CT, PET scans using deep learning in the nearest future. Same aspiration exists with regard to detection of disease-specific patterns in EEG/MEG time series data and to automated histopathology of brain tissue samples. Combined together, these methodologies look at the brain at all possible angles and scales and, thus, they are becoming more than just diagnostic tools. These approaches show promise in alleviating early detection of mental disorders and brain cancers, accelerate the search for life-saving pharmaceuticals, and provide insights about the molecular pathways of the neurodegenerative diseases.
+                        </p><br>
+                        <p>
+                            Deep neural networks have revolutionized computer vision through the end-to-end learning (i.e., learning from the raw data), but also emphasized the need for development of optimization techniques in order to work with the Big Data in the most efficient way. It is because of the lack of such techniques that the early detection of the major neurodegenerative diseases (such as ADHD, Autism, or Alzheimer’s) is still difficult to accomplish with the neural networks today. In these conditions, very large-scale brain imagery datasets and the time-series data are accompanied by the abundance of the expression tests from the established and experimental neurological biomarkers which routinely appear in the research laboratories today.  For example, recent breakthroughs in the -omix and gene editing tools (such as Crispr/Cas9) have enabled experimentation with biomarkers in a very vast parameter space, yet again emphasizing the acute need for efficient deep learning approaches and universally applicable analytics.
+                        </p><br>
+                        <p>
+                            One promising paradigm to address the challenge is to rely on the recently reported scalable framework of tensor neural networks. Such “tensor train” approach constructs a simple and shallow neural network that compresses a large number of network weight parameters, effectively alleviating the inherent curse of dimensionality problem. The “tensor trains” are naturally capable of extracting the essential and discriminative features from the whole-brain fMRI/CT imagery, the associated time-series EEG/MEG data, and the accompanying biomarker assays.
+                        </p><br>
+                        <p>
+                            The workshop is oriented to all potential applications of deep learning and tensor networks in feature extraction, classification, recognition, segmentation, enhancing, clustering, anomaly detection, and prediction of neurodegenerative disease states – as applied to the multi-modal brain data (MRI/fMRI/CT, EEG/MEG, and biomarker assays).  Special focus will be made on the practical aspects of how to design and train tensor neural networks with appropriate reduction of the dimensionality. Subjects of visualization of the informative brain features using a dynamic view of the brain patterns and feature selection methods involved in each of the disease states will also be covered
+                        </p>
+                    </div>
+
+                    <h2>Short description on how the organizers plans to attract quality submissions</h2>
+                    <div>
+                        <p>We would like to engage the most well-known experts and actively working researchers using personal invitations. We expect no real need to justify the rationale of the workshop to them: the application of neural networks towards the brain research is considered as paramount in all related disciplines – from data science to biology.</p><br>
+                        <p>In addition to the personal invitations, which we estimate to become invited and tutorial talks, we will post advertisements in “UAI” mailing list, Google “Machine Learning News” group, Google “Systems Neuroscience” group, etc. to encourage contributed talks in the full-day workshop. Posters will also be welcome to enrich the workshop and stimulate discussions.</p><br>
+                        <p>As the workshop format implies, we will primarily focus on the practical aspects and challenges, which will help us engage industrial attendees as well (GE and Philips collaborators will be invited).</p>
+                    </div>
+
+                    <h2 id="bio">Short bio of the organizers</h2>
+                    <div>
+                        <p>
+                            <b>Andrzej Cichocki, Evgeny Burnaev, Ivan Oseledets, Alexander Bernstein, and Dmitry Dylov</b>
+                            All are Members of  Skolkovo Institute of Science and Technology (SKOLTECH),
+                            Center of  Computational and Intensive Data of Science and Engineering (CDISE)
+                            Moscow, Russia. Skoltech Center for Computational and Data-Intensive Science and Engineering (CDISE) aims at the conduction of cross-cutting interdisciplinary research driven by modern applications in the fields of computational and data sciences. CDISE has accumulated 7 research groups all with unique expertise in Russia and competitive at the world level in their prospective areas. Currently, the center has 9 Professors, 35 researchers, and 37 Ph.D. students.
+                        </p>
+                    </div>
+
+                    <h2 id="program">Tentative program committee</h2>
+                    <div>
+                        The Program Committee will be built up after the workshop proposal will be approved. The Kernel of this Program Committee will be 5 organizers and additionally a number world-wide experts who accept our invitations.
+                    </div>
+
+                    <h2 id="contacts">Contact information of the organizers</h2>
+                    <div>
+                        <ul id="contact-info">
+                            <li><a href="https://faculty.skoltech.ru/people/andrzejcichocki">Andrzej Cichocki</a>, Skoltech, E-mail: A.Cichocki@skoltech.ru</li>
+                            <li><a href="https://faculty.skoltech.ru/people/evgenyburnaev/">Evgeny Burnaev</a>, E-mail: E.Burnaev@skoltech.ru</li>
+                            <li><a href="https://faculty.skoltech.ru/people/ivanoseledets">Ivan Oseledets</a>,  E-mail: I.Oseledets@skoltech.ru</li>
+                            <li><a href="https://faculty.skoltech.ru/people/alexanderbernstein">Alexander Bernstein</a>, Email:  A.Bernstein@skoltech.ru</li>
+                            <li><a href="https://faculty.skoltech.ru/people/dmitrydylov">Dmitry Dylov</a>, Email: D.Dylov@skoltech.ru</li>
+                        </ul>
+                    </div>
+
+                    <h2>Mailing address (common)</h2>
+                    <div>
+                        Skolkovo Institute of Science and Technology<br>
+                        1 Nobel str., Moscow,<br>
+                        121205, Russia
+                    </div>
+
+                    <!-- <h2>Organization</h2>
+                    <div>
+                        <div style="float: left; width: 50%;">
+                            <div style="padding-right: 5px;">
+                                <b>General Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Feida Zhu, Singapore Management University</li>
+                                    <li>Jeffrey Yu, The Chinese University of Hong Kong</li>
+                                </ul>
+                                <b>Program Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Dacheng Tao, The University of Sydney</li>
+                                    <li>Bhavani Thuraisingham, The University of Texas at Dallas</li>
+                                </ul>
+                                <b>Steering Committee Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Xindong Wu, University of Louisiana at Lafayette</li>
+                                </ul>
+                                <b>Tutorial Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Leman Akoglu, Carnegie Mellon University</li>
+                                    <li>Yong Ge, University of Arizona</li>
+                                </ul>
+                                <b>Workshop Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Hanghang Tong, Arizona State University</li>
+                                    <li>Jessie Zhenghui Li, Penn State University</li>
+                                </ul>
+                                <b>Publicity Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>William Wang, University of California at Santa Barbara</li>
+                                    <li>Peng Cui, Tsinghua University</li>
+                                    <li>Yanfang (Fanny) Ye, West Virginia University</li>
+                                </ul>
+                                <b>Local Arrangement Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Bingtian Dai, Singapore Management University</li>
+                                </ul>
+                                <b>Finance Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Wei Ding, University of Massachusetts – Boston</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div>
+                            <div style="float: left; width: 50%;">
+                                <b>Poster Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Siyuan Liu, Penn State University</li>
+                                    <li>Tim Weninger, University of Notre Dame</li>
+                                </ul>
+                                <b>Panel Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>To be announced</li>
+                                </ul>
+                                <b>Data Challenge Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Xiang Ren, University of Southern California</li>
+                                    <li>Yuchen Li, Singapore Management University</li>
+                                    <li>Minghui Qiu, Algorithm Expert, Alibaba Group</li>
+                                </ul>
+                                <b>Web Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Kyong Jin Shim, Singapore Management University</li>
+                                </ul>
+                                <b>Demo Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Aixin Sun, Nanyang Technological University</li>
+                                    <li>Danai Koutra, University of Michigan</li>
+                                </ul>
+                                <b>Sponsorship Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Bo Jin, Dalian University of Technology</li>
+                                </ul>
+                                <b>PhD Forum Chairs</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>Ranga Raju VAatsavai, North Carolina State University</li>
+                                    <li>Yi Yu, National Institute of Informatics (NII)</li>
+                                </ul>
+                                <b>Registration Chair</b>
+                                <ul style="margin-top: 0; margin-left: 20px;">
+                                    <li>David Lo, Singapore Management University</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="clear: both;"></div> -->
+
+                </div>
+                <div id="menu">
+                    <div id="menu-public">
+                        <div class="nav-list">
+                            <div class="nav-list-item"><a href="">Home</a></div>
+                            <div class="nav-list-item"><a href="#dates">Important Dates</a></div>
+                            <div class="nav-list-item"><a href="#keynote">Keynote Speakers</a></div>
+                            <div class="nav-list-item"><a href="#description">Description</a></div>
+                            <div class="nav-list-item"><a href="#bio">Short Bio</a></div>
+                            <div class="nav-list-item"><a href="#program">Program</a></div>
+                            <div class="nav-list-item"><a href="#contacts">Contacts</a></div>
+                            <div class="nav-list-spacer"></div>
+                            <!-- <div class="nav-list-item"><a href="http://kdd.org/kdd2018/">KDD 2018</a></div>
+                            <div class="nav-list-item"><a href="http://kdd.org/kdd2018/"><img src="./web_files/kdd18.png" /></a></div> -->
+                            <!-- <div class="nav-list-spacer"></div> -->
+                            <h3><font color="red">Workshop info:</font></h3>
+                            <div class="nav-list-item"> <b>November 17th</div>
+                            <div class="nav-list-item"> 9:00AM-6:00PM</b></div>
+                            <div class="nav-list-item"> Location: <b>Singapore</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                    <div id="footer-content">The ODD v5.0 Workshop is organized in conjunction with ACM SIGKDD 2018.<br></div>
+                </div>
+            </div>
+        </div>
+    </body>
+    </html>

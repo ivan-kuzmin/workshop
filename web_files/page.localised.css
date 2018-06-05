@@ -1,0 +1,9 @@
+#container {
+	background: url("./img/shadow-lr.png") top right repeat-y;
+}
+#c2 {
+	background: url("./img/shadow-rl.png") top left repeat-y;
+}
+#content {
+	/*background: url("./img/sidebar-ada-v3.png") top right no-repeat;*/
+}
