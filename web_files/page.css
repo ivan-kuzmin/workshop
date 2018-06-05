@@ -109,11 +109,12 @@ td {
 #header-title {
 	z-index: 2;
 	position: absolute;
-	top: 171px;
+	top: 150px;
 	right: 60px;
 	font-size: 2.1em;
 	font-weight: bold;
-	color: #FF944D;
+	/* color: #FF944D; */
+	color: white;
 	text-shadow: -1px 0 #003399, 0 1px #003399, 1px 0 #003399, 0 -1px #003399;
 	line-height:100%;
 	margin-top: 0;
@@ -130,7 +131,9 @@ td {
 	/*right: 496px;*/
 	font-size: 1.3em;
 	font-weight: bold;
-	color: #003366;
+	/* color: #003366; */
+	color: white;
+	text-shadow: -1px 0 #003399, 0 1px #003399, 1px 0 #003399, 0 -1px #003399;
 	line-height:100%;
 }
 #header-subtitle:hover,
@@ -145,7 +148,9 @@ td {
 	/*right: 496px;*/
 	font-size: 200%;
 	font-weight: bold;
-	color: #000066;
+	/* color: #000066; */
+	color: white;
+	text-shadow: -1px 0 #003399, 0 1px #003399, 1px 0 #003399, 0 -1px #003399;
 	line-height:100%;
 }
 #header-toptitle :hover,
